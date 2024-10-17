@@ -1,13 +1,13 @@
-import { request } from './request';
+import { request } from "./request";
 
-const baseUrl = 'https://placeholder.typicode.com';
+const baseUrl = 'https://jsonplaceholder.typicode.com/';
 
 /**
  * Fetch all users.
  * @returns {Promise<Array>} List of users.
  */
 const fetchUsers = async () => {
-	return request(`${baseUrl}/api/users`);
+	return request(`${baseUrl}/users`);
 };
 
 /**
@@ -16,7 +16,7 @@ const fetchUsers = async () => {
  * @returns {Promise<Object>} User data.
  */
 const fetchUserById = async (id) => {
-	return request(`${baseUrl}/api/users/${id}`);
+	return request(`${baseUrl}/users/${id}`);
 };
 
 /**
@@ -25,7 +25,7 @@ const fetchUserById = async (id) => {
  * @returns {Promise<Object>} Created user data.
  */
 const createUser = async (user) => {
-	return request(`${baseUrl}/api/users`, {
+	return request(`${baseUrl}/users`, {
 		method: 'POST',
 		body: JSON.stringify(user),
 	});
@@ -38,7 +38,7 @@ const createUser = async (user) => {
  * @returns {Promise<Object>} Updated user data.
  */
 const updateUser = async (id, user) => {
-	return request(`${baseUrl}/api/users/${id}`, {
+	return request(`${baseUrl}/users/${id}`, {
 		method: 'PUT',
 		body: JSON.stringify(user),
 	});
@@ -50,7 +50,7 @@ const updateUser = async (id, user) => {
  * @returns {Promise<void>}
  */
 const deleteUser = async (id) => {
-	return request(`${baseUrl}/api/users/${id}`, {
+	return request(`${baseUrl}/users/${id}`, {
 		method: 'DELETE',
 	});
 };
