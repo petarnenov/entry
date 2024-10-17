@@ -10,11 +10,14 @@ const Users = () => {
 
 	return (
 		<div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
-			<h1 style={{ textAlign: 'center' }}>User List</h1>
+			<header style={{ marginBottom: '20px', textAlign: 'center' }}>
+				<h1 style={{ fontSize: '24px', color: '#333' }}>My Users</h1>
+			</header>
+			<h2 style={{ textAlign: 'center' }}>User List</h2>
 			<ul style={{ listStyleType: 'none', padding: 0 }}>
 				{users.map(user => (
 					<li key={user.id} style={{ margin: '10px 0', padding: '10px', border: '1px solid #ccc', borderRadius: '5px' }}>
-						<h2 style={{ margin: '0 0 10px 0' }}>{user.name}</h2>
+						<h3 style={{ margin: '0 0 10px 0' }}>{user.name}</h3>
 						<p style={{ margin: '0' }}><strong>Email:</strong> {user.email}</p>
 						<p style={{ margin: '0' }}><strong>Username:</strong> {user.username}</p>
 					</li>
