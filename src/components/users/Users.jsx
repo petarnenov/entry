@@ -1,0 +1,27 @@
+import { useQuery } from '@tanstack/react-query';
+import apiEndpoints from '../../api/users';
+// Adjust the import path as necessary
+
+const Users = () => {
+	const { data: users, error, isLoading } = useQuery({ queryKey: apiEndpoints.fetchUsers.key, queryFn: apiEndpoints.fetchUsers.fn });
+
+	if (isLoading) return <div>Loading...</div>;
+	if (error) return <div>Error loading users</div>;
+
+	return (
+		<div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
+			<h1 style={{ textAlign: 'center' }}>User List</h1>
+			<ul style={{ listStyleType: 'none', padding: 0 }}>
+				{users.map(user => (
+					<li key={user.id} style={{ margin: '10px 0', padding: '10px', border: '1px solid #ccc', borderRadius: '5px' }}>
+						<h2 style={{ margin: '0 0 10px 0' }}>{user.name}</h2>
+						<p style={{ margin: '0' }}><strong>Email:</strong> {user.email}</p>
+						<p style={{ margin: '0' }}><strong>Username:</strong> {user.username}</p>
+					</li>
+				))}
+			</ul>
+		</div>
+	);
+};
+
+export default Users;
