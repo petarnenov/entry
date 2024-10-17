@@ -1,7 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
 import apiEndpoints from '../../api/users';
-// Adjust the import path as necessary
 
+/**
+ * Users component for displaying a list of users
+ * @returns {JSX.Element} Rendered Users component
+ */
 const Users = () => {
 	const { data: users, error, isLoading } = useQuery({ queryKey: apiEndpoints.fetchUsers.key, queryFn: apiEndpoints.fetchUsers.fn });
 
