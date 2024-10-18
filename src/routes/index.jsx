@@ -7,7 +7,6 @@ import UserDetails from "../components/users/UserDetails";
 const router = createBrowserRouter([
   {
     path: "/",
-    exact: true,
     element: <App />,
     children: [
       {
