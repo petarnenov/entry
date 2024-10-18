@@ -1,6 +1,6 @@
 import { request } from "./request";
 
-const baseUrl = 'https://jsonplaceholder.typicode.com/';
+const baseUrl = 'https://jsonplaceholder.typicode.com';
 
 /**
  * Fetch all users.
