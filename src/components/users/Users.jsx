@@ -7,7 +7,7 @@ import apiEndpoints from '../../api/users';
  */
 const Users = () => {
 	const { data: users, error, isLoading } = useQuery({ queryKey: apiEndpoints.fetchUsers.key, queryFn: apiEndpoints.fetchUsers.fn });
-
+ 	//do we need really this one
 	const ssn = 'asdasdasd'
 
 	if (isLoading) return <div>Loading...</div>;
