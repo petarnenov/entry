@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 const Button = ({ onClick, children, disabled = false, className = '' }) => {
+	
 	return (
 		<button
 			onClick={onClick}
