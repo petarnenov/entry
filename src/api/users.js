@@ -1,6 +1,5 @@
 import { request } from "./request";
 
-//add more api's
 const baseUrl = 'https://jsonplaceholder.typicode.com';
 
 /**
