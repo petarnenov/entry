@@ -11,7 +11,7 @@ export default defineConfig({
       headless: true,
     },
     coverage: {
-      provider: "istanbul", // or 'v8',
+      provider: "istanbul",
       reporter: ["text", "html", "lcov"],
     },
   },
