@@ -27,7 +27,7 @@ const UserDetails = () => {
   return (
     <div className="flex justify-center items-center min-h-screen">
       <div className="p-6 bg-white shadow-lg rounded-lg max-w-md border border-gray-200">
-        <h2 className="text-3xl font-bold mb-6 text-gray-800">User Details</h2>
+        <h2 className="text-3xl font-bold mb-6 text-gray-800">User Details Updated</h2>
         <div className="space-y-4">
           <div className="p-4 bg-gray-50 rounded-lg shadow-sm">
             <p className="text-lg">
