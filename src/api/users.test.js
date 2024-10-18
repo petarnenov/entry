@@ -57,10 +57,8 @@ describe('User API', () => {
 
 	it('deleteUser should delete a user by ID', async () => {
 		const userId = 1;
-		const updatedUser = { name: 'John Doe Updated' };
 		request.mockResolvedValue();
 
-		const result = await apiEndpoints.updateUser.fn(userId, updatedUser);
 		await apiEndpoints.deleteUser.fn(userId);
 		expect(request).toHaveBeenCalledWith(`${baseUrl}/users/${userId}`, {
 			method: 'DELETE',
