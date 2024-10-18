@@ -16,7 +16,7 @@ const Users = () => {
 			<header style={{ marginBottom: '20px', textAlign: 'center' }}>
 				<h1 style={{ fontSize: '24px', color: '#333' }}>My Users !!!</h1>
 			</header>
-			<h2 style={{ textAlign: 'center' }}>User List</h2>
+			<h2 style={{ textAlign: 'center' }}>User List {new Date().toLocaleDateSting()}</h2>
 			<ul style={{ listStyleType: 'none', padding: 0 }}>
 				{users.map(user => (
 					<li key={user.id} style={{ margin: '10px 0', padding: '10px', border: '1px solid #ccc', borderRadius: '5px' }}>
