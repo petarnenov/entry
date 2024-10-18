@@ -25,4 +25,10 @@ jobs:
       run: npx playwright install 
 
     - name: Run tests
-      run: npm test
+      run: npm coverage
+
+    - name: SonarCloud Scan
+      uses: SonarSource/sonarcloud-github-action@master
+      env:
+        SONAR_TOKEN: ${{ secrets. SONARCLOUD_TOKEN }}
+
