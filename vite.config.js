@@ -1,17 +1,18 @@
-import { defineConfig } from 'vitest/config'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
   test: {
     browser: {
       enabled: true,
-      name: 'chromium',
-      provider: 'playwright',
+      name: "chromium",
+      provider: "playwright",
       headless: true,
     },
     coverage: {
-      provider: 'istanbul' // or 'v8'
+      provider: "istanbul", // or 'v8',
+      reporter: ["text", "html", "lcov"],
     },
   },
   server: {
@@ -19,4 +20,4 @@ export default defineConfig({
       strict: false,
     },
   },
-})
+});
