@@ -1,0 +1,34 @@
+name: Check Code Coverage
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: npm install
+      
+    - name: Prepare Playwright
+      run: npx playwright install 
+
+    - name: Check code coverage
+      run: |
+        npm run coverage
+        COVERAGE=$(npx nyc report --reporter=text-summary | grep 'Statements' | awk '{print $4}' | sed 's/%//')
+        if [ "$COVERAGE" -lt 40 ]; then
+          echo "Code coverage is below 40%"
+          exit 1
+        fi
