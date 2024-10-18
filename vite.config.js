@@ -14,7 +14,6 @@ export default defineConfig({
       provider: 'istanbul' // or 'v8'
     },
   },
-  // TODO: this is to make ecosystem work, remove when fixed
   server: {
     fs: {
       strict: false,
