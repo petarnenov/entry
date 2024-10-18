@@ -9,7 +9,7 @@ const Users = () => {
 	const { data: users, error, isLoading } = useQuery({ queryKey: apiEndpoints.fetchUsers.key, queryFn: apiEndpoints.fetchUsers.fn });
 
 	if (isLoading) return <div>Loading...</div>;
-	if (error) return <div>Error loading users</div>;
+	if (error) return <div>Error loading users from jsonplaceholder</div>;
 
 	return (
 		<div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
