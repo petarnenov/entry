@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Outlet } from "react-router-dom";
 
@@ -7,8 +6,9 @@ import ErrorBoundary from "./ErrorBoundary";
 import ErrorBoundaryFallback from "./ErrorBoundaryFallback";
 import TopNavigation from "./components/TopNavigation";
 
+const queryClient = new QueryClient();
+
 const App = () => {
-  const [queryClient] = useState(() => new QueryClient());
 
   return (
     <ErrorBoundary fallback={<ErrorBoundaryFallback />}>
