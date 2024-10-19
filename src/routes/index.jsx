@@ -1,11 +1,11 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, createMemoryRouter } from "react-router-dom";
 
 import App from "../App";
 import Users from "../components/users/Users";
 import UserDetails from "../components/users/UserDetails";
 import NotFound from "./NotFound";
 
-const router = createBrowserRouter([
+const routes = [
   {
     path: "/",
     element: <App />,
@@ -21,6 +21,16 @@ const router = createBrowserRouter([
       },
     ],
   },
-]);
+]
 
-export default router;
+const browserRouter = createBrowserRouter(routes);
+const memoryRouter = createMemoryRouter(routes);
+
+export {
+  browserRouter,
+  memoryRouter,
+}
+
+
+
+

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -6,7 +7,7 @@ class ErrorBoundary extends React.Component {
     this.state = { hasError: false };
   }
 
-  static getDerivedStateFromError(_) {
+  static getDerivedStateFromError() {
     return { hasError: true };
   }
 
@@ -18,14 +19,19 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       return (
-        <div>
+        <section>
           {this.props.fallback}
-        </div>
+        </section>
       );
     }
 
     return this.props.children;
   }
 }
+
+ErrorBoundary.propsTypes = {
+  fallback: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired,
+};
 
 export default ErrorBoundary;
