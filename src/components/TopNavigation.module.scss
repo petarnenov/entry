@@ -1,0 +1,30 @@
+.topNav {
+	display: flex;
+	justify-content: flex-end;
+	padding: 1rem;
+	background-color: #f8f9fa;
+
+	.navList {
+		list-style-type: none;
+		display: flex;
+		margin: 0;
+		padding: 0;
+	}
+
+	.navItem {
+		margin-left: 1rem;
+	}
+
+	.navLink {
+		text-decoration: none;
+		color: #495057;
+		padding: 0.5rem 1rem;
+		border-radius: 20px;
+		background-color: #e9ecef;
+		transition: background-color 0.3s ease;
+
+		&:hover {
+			background-color: #dee2e6;
+		}
+	}
+}
