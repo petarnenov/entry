@@ -1,0 +1,44 @@
+.bottomNav {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background-color: #f5f5f5;
+	border-top: 1px solid #e0e0e0;
+	padding: 10px 0;
+
+	.navList {
+		display: flex;
+		justify-content: space-around;
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	.navItem {
+		text-align: center;
+	}
+
+	.navLink {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-decoration: none;
+		color: #757575;
+		font-size: 0.8rem;
+	}
+
+	.navIcon {
+		font-size: 1.5rem;
+		margin-bottom: 2px;
+	}
+
+	.navText {
+		font-weight: 500;
+	}
+
+	.navLink:hover,
+	.navLink:active {
+		color: #424242;
+	}
+}

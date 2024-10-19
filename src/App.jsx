@@ -5,8 +5,14 @@ import HelloWorld from "./HelloWorld";
 import ErrorBoundary from "./ErrorBoundary";
 import ErrorBoundaryFallback from "./ErrorBoundaryFallback";
 import TopNavigation from "./components/TopNavigation";
+import SidebarNavigation from "./components/SidebarNavigation";
+import MainWrapper from "./components/MainWrapper";
+import BottomNavigation from "./components/BottomNavigation";
 
 const queryClient = new QueryClient();
+
+import "./styles/global.scss";
+import MainContent from "./components/MainContent";
 
 const App = () => {
 
@@ -14,8 +20,13 @@ const App = () => {
     <ErrorBoundary fallback={<ErrorBoundaryFallback />}>
       <QueryClientProvider client={queryClient}>
         <TopNavigation />
-        <HelloWorld />
-        <Outlet />
+        <MainWrapper>
+          <SidebarNavigation />
+          <MainContent>
+            <Outlet />
+          </MainContent>
+        </MainWrapper>
+        <BottomNavigation />
       </QueryClientProvider>
     </ErrorBoundary>
   )

@@ -3,6 +3,8 @@
 	justify-content: flex-end;
 	padding: 1rem;
 	background-color: #f8f9fa;
+	height: var(--header-height, 60px);
+	align-items: center;
 
 	.navList {
 		list-style-type: none;

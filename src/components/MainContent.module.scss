@@ -1,0 +1,7 @@
+.mainContent {
+	background-color: #f4f4f4;
+	padding: 20px;
+	height: var(--main-height, 80vh);
+	overflow-y: scroll;
+	flex: 1;
+}
